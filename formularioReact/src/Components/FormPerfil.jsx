@@ -129,18 +129,14 @@ function FormPerfil() {
                                 placeholder="Nueva contraseña"
                             />
 
-                            <div style={{ display: 'flex', gap: '10px', marginTop: '20px' }}>
+                            <div className="perfil-btn-group">
                                 <button type="submit">Guardar Cambios</button>
                                 <button type="button" onClick={() => navigate('/Productos')}>Regresar</button>
                             </div>
                         </form>
 
                         {mensaje && (
-                            <h4 style={{
-                                marginTop: '15px',
-                                color: mensaje.includes('éxito') ? '#04fd9e' : '#ff4444',
-                                textAlign: 'center'
-                            }}>
+                            <h4 className={`perfil-mensaje ${mensaje.includes('éxito') ? 'mensaje-exito' : 'mensaje-error'}`}>
                                 {mensaje}
                             </h4>
                         )}
@@ -148,66 +144,49 @@ function FormPerfil() {
                 </div>
 
                 {/* Sección de Historial de Compras (Tickets) */}
-                <div className="formulario-wrapper" style={{ marginTop: '0' }}>
-                    <div className="datosUsuario" style={{ minHeight: '100%' }}>
-                        <h1 style={{ color: '#04fd9e' }}>MIS COMPRAS 🛒</h1>
-
+                <div className="formulario-wrapper tickets-section">
+                    <div className="datosUsuario tickets-container">
+                        <h1 className="status-delivered">MIS COMPRAS 🛒</h1>
+                        
                         {tickets.length === 0 ? (
-                            <p style={{ textAlign: 'center', color: '#888', marginTop: '20px' }}>
+                            <p className="empty-tickets">
                                 Aún no has realizado ninguna compra.
                             </p>
                         ) : (
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxHeight: '500px', overflowY: 'auto', paddingRight: '10px' }}>
+                            <div className="tickets-scroll">
                                 {tickets.map((ticket) => (
-                                    <div key={ticket.id} style={{
-                                        background: 'rgba(255, 255, 255, 0.05)',
-                                        border: '1px solid rgba(4, 253, 158, 0.2)',
-                                        borderRadius: '15px',
-                                        padding: '15px',
-                                        fontSize: '0.9rem'
-                                    }}>
-                                        <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(4, 253, 158, 0.2)', paddingBottom: '8px', marginBottom: '10px' }}>
-                                            <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                                <span style={{ color: '#04fd9e', fontWeight: 'bold' }}>TICKET #{ticket.id.toString().slice(-6)}</span>
-                                                <span style={{
-                                                    fontSize: '0.7rem',
-                                                    color: ticket.entregado ? '#04fd9e' : '#fd7404',
-                                                    fontWeight: 'bold',
-                                                    marginTop: '2px'
-                                                }}>
+                                    <div key={ticket.id} className="ticket-card">
+                                        <div className="ticket-header">
+                                            <div className="ticket-id-group">
+                                                <span className="ticket-id">TICKET #{ticket.id.toString().slice(-6)}</span>
+                                                <span className={`ticket-status ${ticket.entregado ? 'status-delivered' : 'status-pending'}`}>
                                                     {ticket.entregado ? 'ESTADO: ENTREGADO ✅' : 'ESTADO: PENDIENTE ⏳'}
                                                 </span>
                                             </div>
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                                <span style={{ color: '#888' }}>{ticket.fecha}</span>
-                                                <button
+                                            <div className="ticket-meta">
+                                                <span className="ticket-date">{ticket.fecha}</span>
+                                                <button 
                                                     onClick={() => handleEliminarTicket(ticket.id)}
-                                                    style={{
-                                                        background: 'transparent', border: 'none', color: '#ff4444',
-                                                        cursor: 'pointer', padding: '0 5px', fontSize: '1rem',
-                                                        transition: 'transform 0.2s'
-                                                    }}
+                                                    className="btn-delete-ticket"
                                                     title="Eliminar Ticket"
-                                                    onMouseOver={(e) => e.target.style.transform = 'scale(1.2)'}
-                                                    onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
                                                 >
                                                     🗑️
                                                 </button>
                                             </div>
                                         </div>
-
-                                        <div style={{ marginBottom: '10px' }}>
+                                        
+                                        <div className="ticket-items">
                                             {ticket.items.map((item, idx) => (
-                                                <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
+                                                <div key={idx} className="ticket-item-row">
                                                     <span>{item.cantidad}x {item.nombre}</span>
                                                     <span>₡{item.precio}</span>
                                                 </div>
                                             ))}
                                         </div>
 
-                                        <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px dashed rgba(255,255,255,0.2)', paddingTop: '8px', marginTop: '5px', fontWeight: 'bold' }}>
+                                        <div className="ticket-total-row">
                                             <span>TOTAL PAGADO:</span>
-                                            <span style={{ color: '#04fd9e' }}>
+                                            <span className="ticket-total-value">
                                                 ₡{new Intl.NumberFormat('es-CR').format(ticket.total)}
                                             </span>
                                         </div>

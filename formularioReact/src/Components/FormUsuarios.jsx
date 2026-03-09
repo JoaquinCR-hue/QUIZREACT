@@ -92,11 +92,11 @@ function FormUsuarios() {
             <h4>Contraseña</h4>
             <input type="password" value={Contraseña} onChange={(evento) => setContraseña(evento.target.value)} />
 
-            <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
+            <div className="form-btn-group">
                 <button onClick={CrearUsuario}>Crear Usuario</button>
                 <button onClick={IniciarSesion}>Iniciar Sesión</button>
             </div>
-            {Mensaje && <h4 className="mensaje-exito" style={{marginTop: '15px'}}>{Mensaje}</h4>}
+            {Mensaje && <h4 className="mensaje-exito">{Mensaje}</h4>}
         </div>
     )
 }

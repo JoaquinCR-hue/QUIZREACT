@@ -58,13 +58,7 @@ function MostrarUsuarios() {
 
             {/* Notificación en pantalla */}
             {mensaje && (
-                <div style={{
-                    position: 'fixed', top: '80px', left: '50%', transform: 'translateX(-50%)',
-                    backgroundColor: mensaje.includes('denegado') ? '#ff4444' : '#04fd9e',
-                    color: mensaje.includes('denegado') ? '#fff' : '#000',
-                    padding: '12px 25px', borderRadius: '10px', fontWeight: 'bold',
-                    zIndex: 2000, boxShadow: '0 4px 15px rgba(0,0,0,0.3)', textAlign: 'center'
-                }}>
+                <div className={`notification-toast ${mensaje.includes('denegado') ? 'toast-denied' : 'toast-success'}`}>
                     {mensaje}
                 </div>
             )}
@@ -92,7 +86,7 @@ function MostrarUsuarios() {
             {/* Modal de Edición */}
             {editando && (
                 <div className="modal-overlay">
-                    <div className="datosAdmi" style={{width: '400px'}}>
+                    <div className="datosAdmi modal-inner">
                         <h1>Editar Usuario</h1>
                         <h4>Nombre:</h4>
                         <input type="text" value={formEdit.Nombre} onChange={(e) => setFormEdit({...formEdit, Nombre: e.target.value})} />
@@ -101,16 +95,16 @@ function MostrarUsuarios() {
                         <h4>Contraseña:</h4>
                         <input type="password" value={formEdit.Contraseña} onChange={(e) => setFormEdit({...formEdit, Contraseña: e.target.value})} />
                         
-                        <div style={{ display: 'flex', gap: '10px', marginTop: '20px' }}>
+                        <div className="form-btn-group">
                             <button onClick={handleActualizar}>Actualizar</button>
-                            <button onClick={() => setEditando(null)} style={{backgroundColor: '#666'}}>Cancelar</button>
+                            <button onClick={() => setEditando(null)} className="btn-cancel">Cancelar</button>
                         </div>
                     </div>
                 </div>
             )}
 
             {usuarios.length === 0 && (
-                <p style={{textAlign: 'center', color: '#888', marginTop: '50px'}}>No hay usuarios registrados actualmente.</p>
+                <p className="empty-message">No hay usuarios registrados actualmente.</p>
             )}
         </div>
     )
