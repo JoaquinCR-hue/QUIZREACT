@@ -1,0 +1,21 @@
+.home-container {
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+.formularios-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.formulario-wrapper {
+    flex: 1;
+    min-width: 320px;
+    max-width: 500px;
+}

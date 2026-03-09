@@ -1,0 +1,13 @@
+/* Perfil.css - Minimal styles to avoid conflicting with the glassmorphism theme from FormUsuarios.css */
+
+.perfil-container {
+    display: none; /* Removed as we now use home-container */
+}
+
+/* Ensuring the profile page follows the Home layout exactly */
+.formularios-container {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

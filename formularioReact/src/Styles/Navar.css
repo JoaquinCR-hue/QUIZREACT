@@ -1,0 +1,15 @@
+/* Logo/Brand link */
+.navbar-brand {
+    color: #b40000 !important;
+    font-size: 1.5rem !important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Nav links (standard) */
+.nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+
+/* Custom styles removed to use Bootstrap buttons as requested */

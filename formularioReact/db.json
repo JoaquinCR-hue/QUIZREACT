@@ -1,0 +1,116 @@
+{
+  "usuarios": [
+    {
+      "id": "84e9",
+      "Nombre": "Pepe",
+      "Contraseña": "peep",
+      "Correo": "pepe@pepe.pepe"
+    },
+    {
+      "id": "e78c",
+      "Nombre": "Maria",
+      "Contraseña": "1234",
+      "Correo": "mari@gmail.com"
+    },
+    {
+      "Nombre": "Rachel",
+      "Correo": "rachel@gmail.com",
+      "Contraseña": "12345",
+      "id": "b400"
+    },
+    {
+      "id": "gb3jygrln",
+      "Nombre": "Tita",
+      "Correo": "tita@gmail.com",
+      "Contraseña": "12345678"
+    }
+  ],
+  "administradores": [
+    {
+      "id": "ra6eyaxyo",
+      "Nombre": "Joaco",
+      "Contraseña": "1234",
+      "Correo": "joaco@gmail.com"
+    },
+    {
+      "id": "8xpf26jg0",
+      "Nombre": "Joaquin",
+      "Contraseña": "1234",
+      "Correo": "jaguilarfwdcostarica@gmail.com"
+    }
+  ],
+  "productos": [
+    {
+      "nombre": "MacBook Pro M3",
+      "precio": "1,200,000",
+      "imagen": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1000&auto=format&fit=crop",
+      "categoria": "Laptops",
+      "descripcion": "Potencia desatada con el nuevo chip M3, ideal para profesionales creativos.",
+      "id": "1"
+    },
+    {
+      "nombre": "Sony WH-1000XM5",
+      "precio": "210,000",
+      "imagen": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=1000&auto=format&fit=crop",
+      "categoria": "Audio",
+      "descripcion": "Audífonos premium con cancelación de ruido líder en la industria.",
+      "id": "2"
+    },
+    {
+      "nombre": "Samsung Galaxy S24 Ultra",
+      "precio": "850,000",
+      "imagen": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=1000&auto=format&fit=crop",
+      "categoria": "Smartphones",
+      "descripcion": "La máxima experiencia en Android con inteligencia artificial integrada.",
+      "id": "3"
+    },
+    {
+      "nombre": "iPad Pro 12.9\"",
+      "precio": "750,000",
+      "imagen": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=1000&auto=format&fit=crop",
+      "categoria": "Tablets",
+      "descripcion": "Rendimiento asombroso y pantalla mini-LED para colores vibrantes.",
+      "id": "4"
+    },
+    {
+      "nombre": "NVIDIA RTX 4090",
+      "precio": "1,150,000",
+      "imagen": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?q=80&w=1000&auto=format&fit=crop",
+      "categoria": "Componentes",
+      "descripcion": "La tarjeta gráfica más rápida del mundo para gaming extremo 4K.",
+      "id": "5"
+    },
+    {
+      "nombre": "Apple Watch Ultra 2",
+      "precio": "550,000",
+      "imagen": "https://images.unsplash.com/photo-1434493789847-2f02b0c1605a?q=80&w=1000&auto=format&fit=crop",
+      "categoria": "Smartwatches",
+      "descripcion": "Diseñado para los entornos más extremos. Pantalla más brillante y GPS preciso.",
+      "id": "6"
+    },
+    {
+      "nombre": "Cable usb a ligthing",
+      "precio": "3500",
+      "imagen": "data:image/jpeg;base64,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",
+      "categoria": "Cables",
+      "descripcion": "El cable USB A a Lightning de 1 metro es la solución perfecta para conectar y cargar tus dispositivos Apple. Diseñado para ofrecer una conexión rápida y segura, este cable es resistente y flexible, ideal para el uso diario sin preocupaciones de roturas",
+      "id": "1773012071385"
+    },
+    {
+      "nombre": "BOC A13 / BOCINA MUSIC APOLLO RGB BT FM MIC IPX5",
+      "precio": "19500",
+      "imagen": "https://www.cangurocr.com/upload/items/2025/6/3626_3529.jpg",
+      "categoria": "Bocinas",
+      "descripcion": "Bocina Bluetooth BOC A13 Music Apollo, con iluminación RGB y clasificación IPX5 para resistencia al agua, perfecta para cualquier actividad ??. Con funciones de Bluetooth, FM y micrófono, esta bocina te ofrece una experiencia auditiva envolvente con un estilo vibrante. Su diseño portátil la hace ideal para fiestas, picnics y deportes al aire libre.",
+      "id": "1773018191075"
+    },
+    {
+      "nombre": "INFLA JUMP MC6635 / INFLADOR PORTATIL CON JUMP STAR DE BATERIA 8000mAh",
+      "precio": "35,000",
+      "imagen": "https://www.cangurocr.com/upload/items/2025/6/3757_3646.jpg",
+      "categoria": "Herramientas",
+      "descripcion": "El inflador portátil INFLA JUMP MC6635 combina la funcionalidad de inflado rápido con la capacidad de carga de batería de 8000mAh, lo que lo convierte en un gadget indispensable para cualquier aventura al aire libre. Su diseño compacto y ligero permite transportarlo fácilmente, mientras que su potente motor asegura que no te falte aire en tus momentos de diversión ??.",
+      "id": "1773018457109"
+    }
+  ]
+}

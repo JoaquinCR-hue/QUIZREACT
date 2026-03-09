@@ -1,0 +1,176 @@
+.gestion-container {
+    background-color: #121212;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.gestion-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gestion-titulo {
+    text-align: center;
+    color: #fd7404; /* Color naranja de admin */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.gestion-alerta {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fd7404;
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(253, 116, 4, 0.4);
+}
+
+.gestion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.ticket-admin-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(253, 116, 4, 0.2);
+    border-radius: 20px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-admin-card:hover {
+    border-color: #fd7404;
+    transform: translateY(-5px);
+}
+
+.ticket-admin-card.entregado {
+    border-color: #04fd9e; /* Cambio a verde si está entregado */
+    background: rgba(4, 253, 158, 0.03);
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.ticket-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fd7404;
+}
+
+.ticket-admin-card.entregado .ticket-header h3 {
+    color: #04fd9e;
+}
+
+.ticket-fecha {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 5px 0 0 0;
+}
+
+.status-label {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(253, 116, 4, 0.2);
+    color: #fd7404;
+    font-weight: bold;
+}
+
+.ticket-admin-card.entregado .status-label {
+    background: rgba(4, 253, 158, 0.2);
+    color: #04fd9e;
+}
+
+.user-info {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.items-list {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+.ticket-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.total-box span:first-child {
+    font-size: 0.7rem;
+    color: #888;
+}
+
+.precio-total {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.delivery-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.delivery-check:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.delivery-check input {
+    cursor: pointer;
+    accent-color: #fd7404;
+}
+
+.ticket-admin-card.entregado .delivery-check input {
+    accent-color: #04fd9e;
+}
+
+.gestion-vacio {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #666;
+    margin-top: 50px;
+}

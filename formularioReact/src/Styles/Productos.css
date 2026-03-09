@@ -1,0 +1,130 @@
+.productos-container {
+    padding: 40px 20px;
+    background-color: #121212; /* Dark theme to contrast Home.jsx */
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.productos-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff0000 0%, #c0c0c0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.producto-card {
+    background: rgba(255, 255, 255, 0.05); /* Glassmorphism background */
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(253, 170, 4, 0.2);
+    border-color: rgba(253, 170, 4, 0.5); /* Brand color highlight on hover */
+}
+
+.producto-imagen-wrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    opacity: 0.85;
+}
+
+.producto-card:hover .producto-imagen {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.producto-categoria {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(4, 253, 158, 0.8); /* Accent brand color */
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.producto-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.producto-nombre {
+    font-size: 1.4rem;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.producto-descripcion {
+    font-size: 0.95rem;
+    color: #aaaaaa;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+    flex: 1; /* Pushes footer down */
+}
+
+.producto-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+.producto-precio {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fda904; /* Orange tone from your Home.jsx styles */
+}
+
+.btn-comprar {
+    background-color: transparent;
+    border: 1px solid #04fd9e; /* Green brand */
+    color: #04fd9e;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #04fd9e;
+    color: #121212;
+    box-shadow: 0 0 10px rgba(4, 253, 158, 0.5);
+}
